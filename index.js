@@ -11,7 +11,11 @@ function binarySearch(arr, x) {
       return arr[mid];
     }
   }
-  return arr[start];
+  if(arr[start] == x){
+    return arr[start]
+  } else {
+    return -1
+  }
 }
 // return 1
 console.log(binarySearch([1, 2, 3, 4, 5, 6, 7], 2));
@@ -21,3 +25,5 @@ console.log(binarySearch([1, 2, 3, 4, 5, 6, 7], 6));
 console.log(binarySearch([1, 2, 3, 4, 5, 6, 7], 1));
 // return 6
 console.log(binarySearch([1, 2, 3, 4, 5, 6, 7], 7));
+//return -1
+console.log(binarySearch([1, 2, 3, 4, 5, 6, 7], 9));
